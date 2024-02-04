@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Nav from '../components/Nav';
+---
+
+<Layout title="To-Do">
+	<main>
+		<Nav />
+		<p class="instructions mt-10">
+			Welcome to TaskCanvas! To get started, click <a href="./home"><code class="cursor-pointer">here</code></a><br />
+			You can check out the features of <strong>TO-DO List</strong> below!
+		</p>
+		<ul role="list" class="link-card-grid cursor-default select-none">
+			<Card
+				title="Priority-based Task Sorting"
+				body="Effortlessly prioritize tasks by urgency and importance."
+			/>
+			<Card
+				title="User-Friendly Interface"
+				body="Seamless and intuitive design for efficient task management."
+			/>
+			<Card
+				title="Machine Learning Predictions"
+				body="Harness AI to predict and suggest upcoming tasks."
+			/>
+			<Card
+				title="Insightful Data Analytics"
+				body="Gain valuable insights into your productivity patterns."
+			/>
+			<Card
+				title="Deadline Alerts"
+				body="Never miss a deadline with timely task notifications."
+			/>
+			<Card
+				title="Collaborative Task Management"
+				body="Enhance teamwork with shared task lists and updates."
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	body{
+		width: 100%;
+	}
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	.Heading {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 0.5rem;
+		border-radius: 8px;
+		text-align: center;
+		font-size: x-large;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1.5rem;
+		padding-top: 5px;
+	}
+</style>
