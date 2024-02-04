@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Nav from '../components/Nav';
+import Header from '../components/Header';
 ---
 
 <Layout title="To-Do">
 	<main>
-		<Nav />
+		<Header />
 		<p class="instructions mt-10">
 			Welcome to TaskCanvas! To get started, click <a href="./home"><code class="cursor-pointer">here</code></a><br />
 			You can check out the features of <strong>TO-DO List</strong> below!
@@ -46,7 +46,7 @@ import Nav from '../components/Nav';
 	}
 	main {
 		margin: auto;
-		padding: 1rem;
+		padding: 4rem 1rem 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: white;
@@ -61,13 +61,6 @@ import Nav from '../components/Nav';
 		width: 220px;
 		height: auto;
 		z-index: -1;
-	}
-	.Heading {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
 	}
 	.instructions {
 		margin-bottom: 2rem;
@@ -85,9 +78,6 @@ import Nav from '../components/Nav';
 		color: rgb(var(--accent-light));
 		border-radius: 4px;
 		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
 	}
 	.link-card-grid {
 		display: grid;

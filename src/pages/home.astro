@@ -1,15 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav';
 import ToDo from '../components/ToDo.astro';
+import Header from '../components/Header';
 ---
 
 <Layout title="Home">
   <main>
-    <Nav />
-    <input class="title-input text-black" type="text" />
+    <Header />
+    <!-- <input class="title-input text-black" type="text" /> -->
     <ul role="list" class="todo-card-grid cursor-default select-none">
-			<!-- <ToDo
+			<ToDo
 				title="Priority-based Task Sorting"
 				description="Effortlessly prioritize tasks by urgency and importance."
 			/>
@@ -32,7 +32,7 @@ import ToDo from '../components/ToDo.astro';
 			<ToDo
 				title="Collaborative Task Management"
 				description="Enhance teamwork with shared task lists and updates."
-			/> -->
+			/>
 		</ul>
   </main>
 </Layout>
@@ -43,7 +43,7 @@ import ToDo from '../components/ToDo.astro';
 	}
   main {
 		margin: auto;
-		padding: 1rem;
+		padding: 6rem 1rem 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: white;
@@ -58,13 +58,6 @@ import ToDo from '../components/ToDo.astro';
 		width: 220px;
 		height: auto;
 		z-index: -1;
-	}
-	.Heading {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
 	}
 	.instructions {
 		margin-bottom: 2rem;
@@ -83,17 +76,14 @@ import ToDo from '../components/ToDo.astro';
 		border-radius: 4px;
 		padding: 0.3em 0.4em;
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
 	.todo-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1.5rem;
 		padding-top: 5px;
 	}
-  .title-input{
-    width: 60%;
-    align-items: center;
-  }
+    .title-input{
+        width: 60%;
+        align-items: center;
+    }
 </style>
